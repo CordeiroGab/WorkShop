@@ -1,7 +1,5 @@
 package org.projetospring.workshop.resources;
 
-
-
 import org.projetospring.workshop.entities.User;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
