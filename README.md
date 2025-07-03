@@ -88,20 +88,56 @@ Abaixo estão os principais endpoints disponíveis:
 
 ## 🗂️ Estrutura do Projeto
 
-.
+WorkShop/
 ├── pom.xml
-└── src
-└── main
-├── java
-│   └── org
-│       └── projetospring
-│           └── workshop
-│               ├── WorkShopApplication.java  # Classe principal
-│               ├── config                  # Configurações (ex: TestConfig)
-│               ├── entities                # Entidades JPA
-│               ├── repositories            # Interfaces do Spring Data JPA
-│               ├── resources               # Controladores REST
-│               └── services                # Lógica de negócio
-└── resources
-├── application.properties      # Configurações principais
-└── application-test.properties # Configurações do perfil de teste
+└── src/
+    ├── main/
+    │   ├── java/
+    │   │   └── org/
+    │   │       └── projetospring/
+    │   │           └── workshop/
+    │   │               ├── WorkShopApplication.java
+    │   │               ├── config/
+    │   │               │   └── TestConfig.java
+    │   │               ├── entities/
+    │   │               │   ├── Category.java
+    │   │               │   ├── Order.java
+    │   │               │   ├── OrderItem.java
+    │   │               │   ├── Payment.java
+    │   │               │   ├── Product.java
+    │   │               │   ├── User.java
+    │   │               │   ├── enums/
+    │   │               │   │   └── OrderStatus.java
+    │   │               │   └── pk/
+    │   │               │       └── OrderItemPK.java
+    │   │               ├── repositories/
+    │   │               │   ├── CategoryRepository.java
+    │   │               │   ├── OrderItemRepository.java
+    │   │               │   ├── OrderRepository.java
+    │   │               │   ├── ProductRepository.java
+    │   │               │   └── UserRepository.java
+    │   │               ├── resources/
+    │   │               │   ├── CategoryResource.java
+    │   │               │   ├── OrderResource.java
+    │   │               │   ├── ProductResource.java
+    │   │               │   ├── UserResources.java
+    │   │               │   └── exceptions/
+    │   │               │       ├── ResourceExceptionHandler.java
+    │   │               │       └── StandardError.java
+    │   │               └── services/
+    │   │                   ├── CategoryService.java
+    │   │                   ├── OrderService.java
+    │   │                   ├── ProductService.java
+    │   │                   ├── UserServices.java
+    │   │                   └── exceptions/
+    │   │                       ├── DataBaseException.java
+    │   │                       └── ResourceNotFoundException.java
+    │   └── resources/
+    │       ├── application.properties
+    │       └── application-test.properties
+    └── test/
+        └── java/
+            └── org/
+                └── projetospring/
+                    └── workshop/
+                        └── WorkShopApplicationTests.java
