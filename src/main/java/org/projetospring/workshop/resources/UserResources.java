@@ -26,7 +26,6 @@ public class UserResources {
 
     @GetMapping
     public ResponseEntity<List<User>> findAll(){
-
         List<User> list = userServices.findAll();
         return ResponseEntity.ok().body(list);
 
